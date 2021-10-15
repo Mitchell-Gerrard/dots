@@ -184,6 +184,7 @@ bar {
 for_window [class="^.*"] border pixel 0
 exec_always picom
 exec_always feh --bg-fill /home/mitchyman/Downloads/arp299.jpg
+#exec_allways watch -n 1200 feh –randomize –bg-fill ~/Pictures/* 
 bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
 bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
 bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
