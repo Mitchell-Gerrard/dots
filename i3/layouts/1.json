@@ -1,0 +1,117 @@
+
+{
+    
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 513,
+               "width": 956,
+               "x": 2,
+               "y": 16
+            },
+            "marks": [],
+            "name": "Course Content – 20-21-Partial Differential Equations-14365 - Google Chrome",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Google\\-chrome$",
+                "instance": "^google\\-chrome$",
+                "title": "^Course\\ Content\\ \\–\\ 20\\-21\\-Partial\\ Differential\\ Equations\\-14365\\ \\-\\ Google\\ Chrome$",
+                "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 461,
+               "width": 656,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Terminal - mitchyman@meme-machine:/mnt/win",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Xfce4\\-terminal$",
+                "instance": "^xfce4\\-terminal$",
+                "title": "^Terminal\\ \\-\\ mitchyman\\@meme\\-machine\\:\\/mnt\\/win$",
+                "window_role": "^xfce4\\-terminal\\-1615494864\\-1420736436$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 513,
+               "width": 956,
+               "x": 962,
+               "y": 16
+            },
+            "marks": [],
+            "name": "(70) i3wm restore applications on login - YouTube - Google Chrome",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Google\\-chrome$",
+                "instance": "^google\\-chrome$",
+                "title": "^\\(70\\)\\ i3wm\\ restore\\ applications\\ on\\ login\\ \\-\\ YouTube\\ \\-\\ Google\\ Chrome$",
+                "window_role": "^browser$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "normal",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 461,
+               "width": 656,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "Terminal - mitchyman@meme-machine:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Xfce4\\-terminal$",
+                "instance": "^xfce4\\-terminal$",
+                "title": "^Terminal\\ \\-\\ mitchyman\\@meme\\-machine\\:\\~$",
+                "window_role": "^xfce4\\-terminal\\-1615494868\\-1465104762$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
