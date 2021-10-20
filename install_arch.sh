@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+sudo pacman -Syu
 sudo pacman -S i3-wm i3status alacritty picom python feh ttf-font-awesome
 cd ~
 git clone https://github.com/mitchyman2011/dots.git
