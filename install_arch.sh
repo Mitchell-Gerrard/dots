@@ -7,7 +7,7 @@ git clone https://github.com/mitchyman2011/dots.git
 cd Documents
 git clone https://github.com/mitchyman2011/University.git
 
-cd /~/Pictures
+cd ~/Pictures
 git remote add origin https://github.com/mitchyman2011/Wallpapers.git
 cd ../dots
 ln -s ~/dots/i3 ~/.config/i3
@@ -19,6 +19,7 @@ cd bumblebee-status
 sudo pacman -S base-devel
 makepkg -sicr
 pip install --user bumblebee-status
+cd ~/dots
 cat crontab | crontab -
 
 
