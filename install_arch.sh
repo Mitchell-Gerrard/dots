@@ -10,7 +10,7 @@ git clone https://github.com/mitchyman2011/University.git
 cd ~/Pictures
 git init
 git remote add origin https://github.com/mitchyman2011/Wallpapers.git
-git pull -u master
+git pull origin master
 cd ../dots
 ln -s ~/dots/i3 ~/.config/i3
 ln -s ~/dots/alacritty ~/.config/alacritty
