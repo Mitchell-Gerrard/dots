@@ -185,6 +185,7 @@ bar {
 	status_command /usr/share/bumblebee-status/bumblebee-status -m nic disk:root \
         cpu memory date time battery \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
+	battery-upower.showremaining=true battery-upower.warning=true battery-upower.critical=true\
         -t solarized-powerline
 }
 #exec --no-startup-id ~/load_layout.sh
