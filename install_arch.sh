@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-sudo pacman -S i3-wm i3status alacritty picom python
+sudo pacman -S i3-wm i3status alacritty picom python feh ttf-font-awesome
 cd ~
 git clone https://github.com/mitchyman2011/dots.git
 cd Documents
@@ -16,6 +16,9 @@ ln -s ~/dots/picom ~/.config/picom
 cd ~/.config/i3
 git clone https://aur.archlinux.org/bumblebee-status.git
 cd bumblebee-status
+sudo pacman -S base-devel
 makepkg -sicr
 pip install --user bumblebee-status
+cat crontab | crontab -
+
 
