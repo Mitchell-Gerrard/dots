@@ -182,10 +182,11 @@ bindsym $mod+r mode "resize"
 #}
 bar {
 	position top
-	status_command /usr/share/bumblebee-status/bumblebee-status -m nic disk:root \
+	status_command /usr/share/bumblebee-status/bumblebee-status -m nvidiagpu nic disk:root \
         cpu memory date time battery_upower \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-	battery-upower.showremaining=true battery-upower.warning=true battery-upower.critical=true \
+	battery-upower.showremaining=true battery-upower.warning=true \
+        battery-upower.critical=true nvidiagpu.format="{name}: {temp} {mem_used}/{mem_total} {fanspeed}% {clock_gpu}" \
         -t solarized-powerline
 }
 #exec --no-startup-id ~/load_layout.sh
@@ -193,7 +194,8 @@ for_window [class="^.*"] border pixel 0
 exec_always picom
 #exec_always feh --bg-fill /home/mitchyman/Pictures/ss0vvyi2hfk61.png
 #exec_allways watch -n 10 feh -randomize -bg-fill ~/Pictures/* 
-exec_always feh --randomize --bg-fill /home/mitchyman/Pictures/* 
+#exec_always feh --randomize --bg-fill --no-fehbg /home/mitchyman/Pictures/* 
+exec_always ~/.config/wallpaper.sh>>~/log.txt
 bindsym $mod+Ctrl+Right resize shrink width 1 px or 1 ppt
 bindsym $mod+Ctrl+Up resize grow height 1 px or 1 ppt
 bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
