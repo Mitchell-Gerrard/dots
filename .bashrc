@@ -97,6 +97,13 @@ alias np='nano -w PKGBUILD'
 alias more=less
 alias pdfveiw='xdg-open'
 alias server='ssh -p 555 memesv@192.168.0.67'
+alias gpush='
+git add -A
+git status
+read j
+git commit -m"$j"
+git push'
+alias gpull='git pull origin master' 
 xhost +local:root > /dev/null 2>&1
 
 complete -cf sudo
