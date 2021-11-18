@@ -102,7 +102,7 @@ git add -A
 git status
 read j
 git commit -m"$j"
-git push'
+git push origin master'
 alias gpull='git pull origin master' 
 xhost +local:root > /dev/null 2>&1
 
