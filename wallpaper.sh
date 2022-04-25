@@ -11,7 +11,20 @@ totval=`expr ${#arr[@]}+${#arr1[@]}`
 number=$(( RANDOM % totval ))
 if [ $number -ge $giflen ]
 then
-feh --bg-tile --randomize /home/mitchyman/Pictures/*
+numby=$(($RANDOM % piclen))
+pic=CalabiYau5.jpg
+qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
+    var allDesktops = desktops();
+    print (allDesktops);
+    for (i=0;i<allDesktops.length;i++) {{
+        d = allDesktops[i];
+        d.wallpaperPlugin = "org.kde.image";
+        d.currentConfigGroup = Array("Wallpaper",
+                                     "org.kde.image",
+                                     "General");
+        d.writeConfig("Image","/home/mitchyman/Pictures/'${arr1[$numby]}'")
+    }}
+'
 sleep 120
 else
 hash=`md5sum ~/gifs/${arr[$number]} | cut -f1 -d" "`
@@ -30,7 +43,21 @@ c=0
 slep=0.5
 while [[ $c -lt 12 ]]
 do for i in $(ls ~/gifs/temp/$hash -v)
-do feh --bg-tile --no-fehbg ~/gifs/temp/$hash/$i
+do 
+echo $i
+numby=$(($RANDOM % piclen))
+qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
+    var allDesktops = desktops();
+    print (allDesktops);
+    for (j=0;j<allDesktops.length;j++) {{
+        d = allDesktops[j];
+        d.wallpaperPlugin = "org.kde.image";
+        d.currentConfigGroup = Array("Wallpaper",
+                                     "org.kde.image",
+                                     "General");
+        d.writeConfig("Image","~/gifs/temp/'$hash'/'$i'")
+    }}
+'
 sleep 0.1
 done
 (( c++ ))
