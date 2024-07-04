@@ -13,18 +13,7 @@ if [ $number -ge $giflen ]
 then
 numby=$(($RANDOM % piclen))
 pic=CalabiYau5.jpg
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
-    var allDesktops = desktops();
-    print (allDesktops);
-    for (i=0;i<allDesktops.length;i++) {{
-        d = allDesktops[i];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper",
-                                     "org.kde.image",
-                                     "General");
-        d.writeConfig("Image","/home/mitchyman/Pictures/'${arr1[$numby]}'")
-    }}
-'
+feh --bg-fill --no-fehbg ${arr1[$numby]}
 sleep 120
 else
 hash=`md5sum ~/gifs/${arr[$number]} | cut -f1 -d" "`
@@ -45,19 +34,7 @@ while [[ $c -lt 12 ]]
 do for i in $(ls ~/gifs/temp/$hash -v)
 do 
 echo $i
-numby=$(($RANDOM % piclen))
-qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript '
-    var allDesktops = desktops();
-    print (allDesktops);
-    for (j=0;j<allDesktops.length;j++) {{
-        d = allDesktops[j];
-        d.wallpaperPlugin = "org.kde.image";
-        d.currentConfigGroup = Array("Wallpaper",
-                                     "org.kde.image",
-                                     "General");
-        d.writeConfig("Image","~/gifs/temp/'$hash'/'$i'")
-    }}
-'
+feh --bg-fill --no-fehbg /home/mitchyman/gifs/temp/$hash/$i
 sleep 0.1
 done
 (( c++ ))
@@ -65,3 +42,4 @@ echo $c
 done
 fi
 done
+

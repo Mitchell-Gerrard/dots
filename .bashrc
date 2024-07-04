@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+export EDITOR=nano
 neofetch
 [[ $- != *i* ]] && return
 
@@ -96,7 +97,7 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias pdfveiw='xdg-open'
-alias server='ssh -p 555 memesv@192.168.0.67'
+alias server='ssh -p 555 memesv@192.168.1.19'
 alias gpush='
 git add -A
 git status
@@ -145,6 +146,7 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+cd /mnt/quick/documents/University
 #export PATH="/usr/bin/python"
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
